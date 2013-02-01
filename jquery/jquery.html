@@ -1,0 +1,109 @@
+<html>
+    
+    <style type="text/css"> 
+        #prueba,#citas,#micapa { 
+            color: purple; 
+            background-color: #d8da3d;
+            height: 200px;
+            width: 200px;
+            border: solid blue 1px;
+        } 
+    </style> 
+    
+    <head>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    </head>
+    
+    
+    <body>
+        <script type="text/javascript">
+            
+            function load_task(){
+                    $.getJSON('tareas.php', function(data, textStatus){  
+                    $.each(data, function(i, tarea){  
+                      $("<li></li>").html(tarea.nombre + " - " + tarea.hora).appendTo("ul#tareas");  
+                    });  
+                });  
+
+            }
+        
+            function colaEfectos(){
+                capa = $("#micapa");
+                capa.animate({
+                   "font-size": "1.5em"
+                }, 2000);
+                capa.hide(1000);
+                capa.show(1000);
+                capa.animate({
+                   "left": "350px",
+                   "top": "50px"
+                },1500);
+                capa.animate({
+                   "font-size": "0.75em"
+                }, 2000);
+                capa.animate({
+                   "left": "100px",
+                   "top": "20px"
+                }, 1500, colaEfectos);
+        }
+            
+            
+            $(document).ready(function () {  
+                $("#prueba").hide();  
+                $("#prueba").delay(600).fadeIn();
+            });  
+        
+        </script>
+        
+        <input type="button" value="Ocultar panel" onclick='javascript: $("#prueba").delay(600).fadeOut();'/>
+        <input type="button" value="Mostrar panel" onclick='javascript: $("#prueba").delay(600).fadeIn();'/>
+        
+        <input type="button" value="Mostrar desde arriba" onclick='javascript: $("#prueba").delay(200).slideUp();'/>
+        
+        
+        <input type="button" value="Cargar lista" onclick='javascript:$("#citas").load("citas.html");'/>
+        
+        <input type="button" value="Cargar php" onclick='javascript:$("#php").load("prueba.php");'/>
+               
+         <input type="button" value="Cargar tareas" onclick='javascript:load_task();'/>   
+            
+        <input type="button" value="Animar" onclick="javascript: $('#prueba').animate({opacity:0.50,width:100}, 'slow');"/>   
+        
+        <input type="button" value="Animar otro" onclick="javascript: $('#prueba').animate({opacity:50.100,height:100}, 'slow');"/>   
+      
+        <input type="button" value="Estilo borde" onclick="javascript: $('#prueba').css('border','3px solid red');"/>   
+        
+         <input type="button" value="Cola efectos" onclick="javascript:colaEfectos();"/>   
+      
+      
+        <div id="prueba">
+            
+        
+        </div>
+        
+        <div id="citas">
+            
+            
+        </div>
+        
+        <div id="php">
+            
+            
+        </div>
+        
+          <div id="micapa">
+            <p>   Helloooo esta es mi capaaa </p>
+            
+        </div>
+        
+        <ul id="tareas">
+            
+        </ul>
+      
+        
+      
+        
+    </body>
+    
+    
+</html>
