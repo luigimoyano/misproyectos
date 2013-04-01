@@ -1,5 +1,5 @@
 #!/bin/sh
-#	
+#	Aqui vamos a poner todos los elementos basicos de la programacion en shell-scripting, (condiciones, bucles, manejo de variables, etc).
 # Script to see whether argument is positive or negative
 #
 if [ $# -eq 0 ]

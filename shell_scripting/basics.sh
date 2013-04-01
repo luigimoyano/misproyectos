@@ -14,3 +14,6 @@ echo "$1 number is positive"
 else
 echo "$1 number is negative"
 fi
+
+
+# En casa aparte tienes el codigo de ejemplo. 
