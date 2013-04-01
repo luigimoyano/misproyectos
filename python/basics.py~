@@ -11,7 +11,6 @@ for w in words:
 
 
 x = int(raw_input("Please enter an integer: "))
-Please enter an integer: 42
 if x < 0:
       x = 0
       print 'Negative changed to zero'
