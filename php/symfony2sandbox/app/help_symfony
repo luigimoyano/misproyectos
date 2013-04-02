@@ -1,0 +1,87 @@
+Symfony version 2.0.12 - app/dev/debug
+
+Usage:
+  [options] command [arguments]
+
+Options:
+  --help           -h Display this help message.
+  --quiet          -q Do not output any message.
+  --verbose        -v Increase verbosity of messages.
+  --version        -V Display this application version.
+  --ansi              Force ANSI output.
+  --no-ansi           Disable ANSI output.
+  --no-interaction -n Do not ask any interactive question.
+  --shell          -s Launch the shell.
+  --env            -e The Environment name.
+  --no-debug          Switches off debug mode.
+
+Available commands:
+  help                                  Displays help for a command
+  list                                  Lists commands
+assetic
+  assetic:dump                          Dumps all assets to the filesystem
+assets
+  assets:install                        Installs bundles web assets under a public web directory
+cache
+  cache:clear                           Clears the cache
+  cache:create-cache-class              Generate the classes.php files
+  cache:warmup                          Warms up an empty cache
+container
+  container:debug                       Displays current services for an application
+doctrine
+  doctrine:cache:clear-metadata         Clears all metadata cache for a entity manager
+  doctrine:cache:clear-query            Clears all query cache for a entity manager
+  doctrine:cache:clear-result           Clears result cache for a entity manager
+  doctrine:database:create              Creates the configured databases
+  doctrine:database:drop                Drops the configured databases
+  doctrine:ensure-production-settings   Verify that Doctrine is properly configured for a production environment.
+  doctrine:fixtures:load                Load data fixtures to your database.
+  doctrine:generate:crud                Generates a CRUD based on a Doctrine entity
+  doctrine:generate:entities            Generates entity classes and method stubs from your mapping information
+  doctrine:generate:entity              Generates a new Doctrine entity inside a bundle
+  doctrine:generate:form                Generates a form type class based on a Doctrine entity
+  doctrine:mapping:convert              Convert mapping information between supported formats.
+  doctrine:mapping:import               Imports mapping information from an existing database
+  doctrine:mapping:info                 Shows basic information about all mapped entities
+  doctrine:migrations:diff              Generate a migration by comparing your current database to your mapping information.
+  doctrine:migrations:execute           Execute a single migration version up or down manually.
+  doctrine:migrations:generate          Generate a blank migration class.
+  doctrine:migrations:migrate           Execute a migration to a specified version or the latest available version.
+  doctrine:migrations:status            View the status of a set of migrations.
+  doctrine:migrations:version           Manually add and delete migration versions from the version table.
+  doctrine:query:dql                    Executes arbitrary DQL directly from the command line.
+  doctrine:query:sql                    Executes arbitrary SQL directly from the command line.
+  doctrine:schema:create                Executes (or dumps) the SQL needed to generate the database schema
+  doctrine:schema:drop                  Executes (or dumps) the SQL needed to drop the current database schema
+  doctrine:schema:update                Executes (or dumps) the SQL needed to update the database schema to match the current mapping metadata
+fos
+  fos:user:activate                     Activate a user
+  fos:user:change-password              Change the password of a user.
+  fos:user:create                       Create a user.
+  fos:user:deactivate                   Deactivate a user
+  fos:user:demote                       Demote a user by removing a role
+  fos:user:promote                      Promotes a user by adding a role
+generate
+  generate:bundle                       Generates a bundle
+  generate:doctrine:crud                Generates a CRUD based on a Doctrine entity
+  generate:doctrine:entities            Generates entity classes and method stubs from your mapping information
+  generate:doctrine:entity              Generates a new Doctrine entity inside a bundle
+  generate:doctrine:form                Generates a form type class based on a Doctrine entity
+init
+  init:acl                              Mounts ACL tables in the database
+router
+  router:debug                          Displays current routes for an application
+  router:dump-apache                    Dumps all routes as Apache rewrite rules
+sonata
+  sonata:admin:explain                  Explain an admin service
+  sonata:admin:generate-object-acl      Install ACL for the objects of the Admin Classes.
+  sonata:admin:list                     List all admin services available
+  sonata:admin:setup-acl                Install ACL for Admin Classes
+  sonata:block:debug                    Debug all blocks available, show default settings of each block
+  sonata:cache:flush                    Flush information
+  sonata:cache:flush-all                Flush all information set in cache managers
+  sonata:easy-extends:dump-mapping      Dump some mapping information (debug only)
+  sonata:easy-extends:generate          Create entities used by Sonata's bundles
+  sonata:user:two-step-verification     Generate a two step verification process to secure an access (Ideal for super admin protection)
+swiftmailer
+  swiftmailer:spool:send                Sends emails from the spool

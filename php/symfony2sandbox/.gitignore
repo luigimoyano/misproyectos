@@ -1,0 +1,29 @@
+# generic files to ignore
+*~
+*.lock
+!deps.lock
+*.DS_Store
+*.swp
+*.out
+
+# Apache logs
+apache_logs
+apache_logs/
+www_logs/
+
+# PHPStorm files
+.idea/
+
+# Symfony2 files
+# Bootstrap
+app/bootstrap*
+
+# Symfony directories
+vendor/*
+*/logs/*
+*/cache/*
+web/uploads/*
+web/bundles/*
+
+# Configuration files
+app/config/parameters.ini
