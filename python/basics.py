@@ -4,12 +4,13 @@ print 5;
 print "Hello world";
 
 
+## Iterando una lista con for.
 words = ['cat', 'window', 'defenestrate']
 for w in words:
 	print w, len(w)
 
-
-
+## Pidiendo un entero por consola.
+## y haciendo varios casos de if. 	
 x = int(raw_input("Please enter an integer: "))
 if x < 0:
       x = 0
@@ -25,8 +26,12 @@ else:
 def fib(n):
      a, b = 0, 1
      while a < n:
-         print a,
-         a, b = b, a+b
+        print a,
+        a, b = b, a+b
 
 # Now call the function we just defined:
 fib(2000) 
+
+
+
+
