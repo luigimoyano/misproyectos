@@ -1,0 +1,3 @@
+Manual seguido 
+
+http://book.cakephp.org/2.0/en/tutorials-and-examples/blog/part-two.html

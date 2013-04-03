@@ -5,6 +5,7 @@ use Doctrine\Common\Annotations\AnnotationRegistry;
 
 $loader = new UniversalClassLoader();
 $loader->registerNamespaces(array(
+    //'Application\BlogBundle' => '/../src',
     'Symfony'          => array(__DIR__.'/../vendor/symfony/src', __DIR__.'/../vendor/bundles'),
     'Sensio'           => __DIR__.'/../vendor/bundles',
     'JMS'              => __DIR__.'/../vendor/bundles',
@@ -16,7 +17,7 @@ $loader->registerNamespaces(array(
     'Monolog'          => __DIR__.'/../vendor/monolog/src',
     'Assetic'          => __DIR__.'/../vendor/assetic/src',
     'Metadata'         => __DIR__.'/../vendor/metadata/src',
-
+   
     // Auth
     'FOS'              => __DIR__.'/../vendor/bundles',
     'Application'      => __DIR__.'/../src', // Default Bundle To Manage just to Auth, DON'T modify ANYTHING!

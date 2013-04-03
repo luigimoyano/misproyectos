@@ -35,6 +35,7 @@ class AppKernel extends Kernel
             // Agregando lib para manipulación de imagenes
             new Liip\ImagineBundle\LiipImagineBundle(),
             new MiVendor\MiModuloBundle\MiVendorMiModuloBundle(),
+          //  new Application\BlogBundle\Application/BlogBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {
