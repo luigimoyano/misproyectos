@@ -1,10 +1,16 @@
 <?
 
 class PostsController extends AppController {
+
+    var $uses = array();
 	public $helpers = array('Html', 'Form');
 
+    public $name = 'Posts';
+    //public $components = array('Session');
+    public $components = array('Auth','Session');
+
     public function index() {
-         $this->set('posts', $this->Post->find('all'));
+        $this->set('posts', $this->Post->find('all'));
     }
 
     public function view($id = null) {
@@ -22,10 +28,12 @@ class PostsController extends AppController {
     public function add() {
         if ($this->request->is('post')) {
             $this->Post->create();
+            $this->request->data['Post']['user_id'] = $this->Auth->user('id'); //Added this line
             if ($this->Post->save($this->request->data)) {
                 $this->Session->setFlash('Your post has been saved.');
                 $this->redirect(array('action' => 'index'));
-            } else {
+            }
+            else {
                 $this->Session->setFlash('Unable to add your post.');
             }
         }
