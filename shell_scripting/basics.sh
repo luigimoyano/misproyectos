@@ -18,5 +18,31 @@ fi
 
 # En casa aparte tienes el codigo de ejemplo. 
 
+## Bucle for.
 
+#for (( i = 0; i '<' 10; i ++ )) do
+#  echo "Vuelta número $i"
+#done
+
+
+## Case
+
+speed=120
+case $speed in
+0)
+  echo "Estás parado."
+  ;;
+90)
+  echo "Vas dentro de los límites de carretera normal."
+  ;;
+120)
+  echo "Vas en el límite de autopista."
+  ;;
+130)
+  echo "Esa multa..."
+  ;;
+*)
+  echo “Esta velocidad no me suena.”
+
+esac
 
