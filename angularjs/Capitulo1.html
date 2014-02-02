@@ -1,0 +1,39 @@
+    <!doctype html>
+    <html ng-app>
+    <head>
+        <script src="http://code.angularjs.org/1.2.9/angular.min.js"></script>
+        <script>
+                function HelloCntl($scope) {
+                    $scope.name = 'World';
+                }
+
+                var WorldCtrl = function ($scope) {
+                $scope.population = 7000;
+                $scope.countries = [
+                        {name: 'France', population: 63.1},
+                        {name: 'United Kingdom', population: 61.8},
+                    ];
+                };
+        </script>
+    </head>
+        <body ng-app ng-init="namer = 'World'">
+            <div ng-controller="HelloCntl">
+            Your name: <input type="text" ng-model="name"/>
+            <hr/>
+                Hello {{name || "World"}}!
+            </div>
+
+            Say hello to: <input type="text" ng-model="namer">
+            <h1>Hello, {{namer}}!</h1>
+
+
+            <ul ng-controller="WorldCtrl">
+                <li ng-repeat="country in countries">
+                    {{country.name}} has population of {{country.population}}
+                </li>
+                <hr>
+                World's population: {{population}} millions
+            </ul>
+
+        </body>
+    </html>

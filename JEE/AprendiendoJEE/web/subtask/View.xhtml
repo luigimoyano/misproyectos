@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+
+    <ui:composition template="/template.xhtml">
+        <ui:define name="title">
+            <h:outputText value="#{bundle.ViewSubtaskTitle}"></h:outputText>
+        </ui:define>
+        <ui:define name="body">
+            <h:panelGroup id="messagePanel" layout="block">
+                <h:messages errorStyle="color: red" infoStyle="color: green" layout="table"/>
+            </h:panelGroup>
+            <h:form>
+                <h:panelGrid columns="2">
+                    <h:outputText value="#{bundle.ViewSubtaskLabel_id}"/>
+                    <h:outputText value="#{subtaskController.selected.id}" title="#{bundle.ViewSubtaskTitle_id}"/>
+                    <h:outputText value="#{bundle.ViewSubtaskLabel_name}"/>
+                    <h:outputText value="#{subtaskController.selected.name}" title="#{bundle.ViewSubtaskTitle_name}"/>
+                    <h:outputText value="#{bundle.ViewSubtaskLabel_completed}"/>
+                    <h:outputText value="#{subtaskController.selected.completed}" title="#{bundle.ViewSubtaskTitle_completed}"/>
+                    <h:outputText value="#{bundle.ViewSubtaskLabel_task}"/>
+                    <h:outputText value="#{subtaskController.selected.task}" title="#{bundle.ViewSubtaskTitle_task}"/>
+                </h:panelGrid>
+                <br />
+                <h:commandLink action="#{subtaskController.destroyAndView}" value="#{bundle.ViewSubtaskDestroyLink}"/>
+                <br />
+                <br />
+                <h:link outcome="Edit" value="#{bundle.ViewSubtaskEditLink}"/>
+                <br />
+                <h:commandLink action="#{subtaskController.prepareCreate}" value="#{bundle.ViewSubtaskCreateLink}" />
+                <br />
+                <h:commandLink action="#{subtaskController.prepareList}" value="#{bundle.ViewSubtaskShowAllLink}"/>
+                <br />
+                <br />
+                <h:link outcome="/index" value="#{bundle.ViewSubtaskIndexLink}"/>
+
+            </h:form>
+        </ui:define>
+    </ui:composition>
+
+</html>
